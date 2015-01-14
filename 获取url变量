@@ -1,3 +1,8 @@
+/*
+jquery 获取url变量
+$.getUrlVars("") //获取数组
+$.getUrlVar("") //获取字符串
+*/
 $.extend({  
   getUrlVars: function(){  
     var vars = [], hash;  
