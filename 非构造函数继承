@@ -1,14 +1,14 @@
 function deepCopy(p, c) {
-¡¡¡¡var c = c || {};
-¡¡¡¡for (var i in p) {
-¡¡¡¡¡¡¡¡if (typeof p[i] === 'object') {
-¡¡¡¡¡¡¡¡¡¡¡¡c[i] = (p[i].constructor === Array) ? [] : {};
-¡¡¡¡¡¡¡¡¡¡¡¡deepCopy(p[i], c[i]);
-¡¡¡¡¡¡¡¡} else {
-¡¡¡¡¡¡¡¡¡¡¡¡¡¡c[i] = p[i];
-¡¡¡¡¡¡¡¡}
-¡¡¡¡}
-¡¡¡¡return c;
+ã€€ã€€var c = c || {};
+ã€€ã€€for (var i in p) {
+ã€€ã€€ã€€ã€€if (typeof p[i] === 'object') {
+ã€€ã€€ã€€ã€€ã€€ã€€c[i] = (p[i].constructor === Array) ? [] : {};
+ã€€ã€€ã€€ã€€ã€€ã€€deepCopy(p[i], c[i]);
+ã€€ã€€ã€€ã€€} else {
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€c[i] = p[i];
+ã€€ã€€ã€€ã€€}
+ã€€ã€€}
+ã€€ã€€return c;
 }
 
 
