@@ -1,5 +1,5 @@
 /*
-John Resig JavaScript¼Ì³Ð
+John Resig JavaScriptç»§æ‰¿
 */
 (function() {
 	var initializing = false, fnTest = /xyz/.test(function() { xyz; }) ? /\b_super\b/ : /.*/;
@@ -36,7 +36,7 @@ John Resig JavaScript¼Ì³Ð
 		
 		
 var Person = Class.extend({
-	// initÊÇ¹¹Ôìº¯Êý
+	// initæ˜¯æž„é€ å‡½æ•°
 	init: function(name) {
 		this.name = name;
 	},
@@ -44,11 +44,11 @@ var Person = Class.extend({
 		return this.name;
 	}
 });
-// EmployeeÀà´ÓPersonÀà¼Ì³Ð
+// Employeeç±»ä»ŽPersonç±»ç»§æ‰¿
 var Employee = Person.extend({
-	// initÊÇ¹¹Ôìº¯Êý
+	// initæ˜¯æž„é€ å‡½æ•°
 	init: function(name, employeeID) {
-		//  ÔÚ¹¹Ôìº¯ÊýÖÐµ÷ÓÃ¸¸ÀàµÄ¹¹Ôìº¯Êý
+		//  åœ¨æž„é€ å‡½æ•°ä¸­è°ƒç”¨çˆ¶ç±»çš„æž„é€ å‡½æ•°
 		this._super(name);
 		this.employeeID = employeeID;
 	},
@@ -56,7 +56,7 @@ var Employee = Person.extend({
 		return this.employeeID;
 	},
 	getName: function() {
-		//  µ÷ÓÃ¸¸ÀàµÄ·½·¨
+		//  è°ƒç”¨çˆ¶ç±»çš„æ–¹æ³•
 		return "Employee name: " + this._super();
 	}
 });
