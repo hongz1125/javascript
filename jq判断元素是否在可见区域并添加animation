@@ -1,0 +1,34 @@
+/**
+ * @author devil
+ * @title jquery 判断元素是否在可视范围内 并添加JSanimation
+ * @param string jquery 选择器
+ *  */
+$.extend({
+	isVisible : function(d) {
+		var fun = function() {
+			$(d).each(function() {
+				var self = $(this);
+				var oT = self.offset().top;
+				var oH = self.outerHeight();
+				var wT = $(window).scrollTop();
+				var wH = $(window).height();
+				if (oT >= wT && oT + oH <= wT + wH) {
+					self.addClass("JSanimation");
+				}
+				if (oT + oH <= wT || oT >= wT + wH) {
+					self.removeClass("JSanimation");
+				}
+			});
+		};
+		fun();
+		$(window).on("scroll", function() {
+			fun();
+		});
+	}
+});
+
+
+
+$(function() {
+	$.isVisible(".JSinView");//添加元素是否可见监听
+});
